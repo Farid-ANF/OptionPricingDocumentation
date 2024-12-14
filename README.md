@@ -1,1 +1,1 @@
-# OptionPricingDocumentation
+# Option Pricing
