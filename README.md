@@ -1,15 +1,21 @@
 # Option Pricing
 
+## **EDA**
 
+We looked at the correlation matrix and the heatmap, and then perform PCA. 
 
+  <img src="outputs/figures/EDA.png" alt="Alt text" /><br>
 
+To reduce dimensionality and identify the most significant features, I conducted PCA. This technique allowed me to determine the components that account for 95% of the variance in the data, ensuring that only the most relevant features were used in the modeling process. We end up with the fact that all the data is needed to reach 95% accuracy. Our target variable is ``lastPrice``. 
+
+## **Model Selection** 
 
 **Model Training and Tuning**: I implemented a variety of machine learning algorithms to analyze the preprocessed data, specifically NGRegressor, Linear Regression, Random Forest, and XGBoost Regressor. Each model was fine-tuned to maximize its performance and ensure accurate predictions. To further improve the predictive accuracy of these models, I conducted an extensive hyperparameter tuning process, adjusting various parameters to achieve optimal results tailored to the specific characteristics of the dataset.
 
 **Model Evaluation**: The performance of each model was rigorously assessed utilizing the mean squared error (MSE) metric, a standard measure for evaluating the accuracy of regression models. Among all the models analyzed, the XGBoost Regressor stood out by delivering the most impressive results, as it recorded the lowest MSE. This significant finding suggests that the XGBoost Regressor not only excelled compared to its competitors but also surpassed the traditional Black-Scholes model, which is widely used for option pricing. This indicates a notable advancement in the accuracy of option pricing tasks, highlighting the effectiveness of the XGBoost Regressor in this domain.
 
 
-  <img src="ModelPerformance.png" alt="Alt text" /><br>
+  <img src="outputs/figures/ModelPerformance.png" alt="Alt text" /><br>
 
 
 ## **Conclusion** 
