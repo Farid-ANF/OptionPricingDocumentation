@@ -84,12 +84,16 @@ The ticker symbol **SPY** represents the **SPDR S&P 500 ETF Trust**, which is an
 
 ## **Data Cleaning and Merging**
 
+[Data wrangling notebook](notebooks/data_wrangling.ipynb)
+
 We need both the option price and the stock price, so we merge the data of both by date. Additionally, we need to clean the data, which involves addressing all NaN values and identifying any outliers. We decided not to remove the outliers, as they are essential for our predictions.
 
 
 
 
 ## **EDA**
+
+[Exploratory data analysis notebook](notebooks/exploratory_data_analysis.ipynb)
 
 We looked at the correlation matrix and the heatmap, and then perform PCA. 
 
@@ -98,6 +102,10 @@ We looked at the correlation matrix and the heatmap, and then perform PCA.
 To reduce dimensionality and identify the most significant features, I conducted PCA. This technique allowed me to determine the components that account for 95% of the variance in the data, ensuring that only the most relevant features were used in the modeling process. We end up with the fact that all the data is needed to reach 95% accuracy. Our target variable is ``lastPrice``. 
 
 ## **Model Selection** 
+
+[Data preprocessing notebook](notebooks/data_preprocessing.ipynb)
+
+[Model selection notebook](notebooks/model_selection.ipynb)
 
 **Model Training and Tuning**: I implemented a variety of machine learning algorithms to analyze the preprocessed data, specifically NGRegressor, Linear Regression, Random Forest, and XGBoost Regressor. Each model was fine-tuned to maximize its performance and ensure accurate predictions. To further improve the predictive accuracy of these models, I conducted an extensive hyperparameter tuning process, adjusting various parameters to achieve optimal results tailored to the specific characteristics of the dataset.
 
